@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
+import { Fab } from "@mui/material";
 function CreateArea(props) {
 
   const [note, setNote] = useState({
@@ -40,16 +41,16 @@ function CreateArea(props) {
           name="content"
           value={note.content}
           placeholder="Content "
-          className="block w-80 px-4 outline-none"
+          className="block w-80 px-4 outline-none resize-none"
           rows="3"
           onChange={handleChange}
         ></textarea>
-        <button
-          className="float-right mr-4 bg-purple-300 px-10 py-1 rounded-full text-white hover:bg-gray-300 hover:text-purple-300"
+        <Fab
+          className="float-right mr-4 bg-purple-300  w-12 h-12 mt-6 rounded-full text-white hover:bg-gray-300 hover:text-purple-300"
           onClick={submitNote}
         >
           <AddIcon/>
-        </button>
+        </Fab>
       </form>
     </div>
   );

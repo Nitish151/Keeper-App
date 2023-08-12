@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Fab } from "@mui/material";
 
 
 function Note(props) {
@@ -18,7 +19,7 @@ function Note(props) {
       <div><h1 class=" mb-2 text-xl font-bold whitespace-pre-wrap break-words">{props.title}</h1></div>
 
       <div><p class="text-l mb-3 whitespace-pre-wrap break-words">{props.content}</p></div>
-      <button className="float-right mr-1 bg-purple-300 px-8 py-1 rounded-full text-white hover:bg-gray-300 hover:text-purple-300" onClick={handleClick}><DeleteIcon/></button>
+      <Fab className="float-right bg-purple-300  w-12 h-12 rounded-full text-white hover:bg-gray-300 hover:text-purple-300" onClick={handleClick}><DeleteIcon/></Fab>
     </div>
   );
 }

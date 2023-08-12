@@ -10,7 +10,7 @@ function App() {
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
-      return [...prevNotes, newNote];
+      return (newNote.title.length !== 0 || newNote.content.length !== 0) ? [...prevNotes, newNote] : [...prevNotes];
     });
   }
 
